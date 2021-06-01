@@ -151,14 +151,13 @@ export default class BaseRpc extends EventEmitter {
     this.ws.destroy()
   }
 
-  private createCallBasedMethod = (name: string) => (
-    args?: Args,
-    listener?: Parameters<BaseRpc["call"]>[2]
-  ): any => {
-    return this.call(name, args, listener).then((res) => {
-      return res
-    })
-  }
+  private createCallBasedMethod =
+    (name: string) =>
+    (args?: Args, listener?: Parameters<BaseRpc["call"]>[2]): any => {
+      return this.call(name, args, listener).then((res) => {
+        return res
+      })
+    }
 
   subscribe = this.createCallBasedMethod("subscribe")
   unsubscribe = this.createCallBasedMethod("unsubscribe")

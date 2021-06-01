@@ -17,13 +17,11 @@ export const keystores = {
       kdf: "pbkdf2",
       kdfparams: {
         dklen: 32,
-        salt:
-          "04fc271dcd65e9e833ed2b6a1b4f90ce80b06fb57f9283c29d403cc269e4d8a7",
+        salt: "04fc271dcd65e9e833ed2b6a1b4f90ce80b06fb57f9283c29d403cc269e4d8a7",
         c: 262144,
         prf: "hmac-sha256",
       },
-      mac:
-        "32beae99a8cc2f9f2134f5aad1047b33182d3bd9996f9c7a88c51429da8942d7fbd44d6035934031aaee3af189cd54644c4655bb6c20c96f7c25ac906ca4786d",
+      mac: "32beae99a8cc2f9f2134f5aad1047b33182d3bd9996f9c7a88c51429da8942d7fbd44d6035934031aaee3af189cd54644c4655bb6c20c96f7c25ac906ca4786d",
     },
   },
   // keystore with sha256 mac
@@ -39,8 +37,7 @@ export const keystores = {
       kdf: "pbkdf2",
       kdfparams: {
         dklen: 32,
-        salt:
-          "ad10ef544417d4a25914dec3d908882686dd9d793b5c484b76fd5aa575cf54b9",
+        salt: "ad10ef544417d4a25914dec3d908882686dd9d793b5c484b76fd5aa575cf54b9",
         c: 262144,
         prf: "hmac-sha256",
       },
@@ -60,8 +57,7 @@ export const keystores = {
       kdf: "pbkdf2",
       kdfparams: {
         dklen: 32,
-        salt:
-          "ad10ef544417d4a25914dec3d908882686dd9d793b5c484b76fd5aa575cf54b9",
+        salt: "ad10ef544417d4a25914dec3d908882686dd9d793b5c484b76fd5aa575cf54b9",
         c: 262144,
         prf: "hmac-sha256",
       },

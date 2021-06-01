@@ -17,10 +17,6 @@
 /* eslint-disable*/
 import ledgerApp from "./ledger-app"
 
-// intentionally ambiguous to confuse webpack (we don't need this in web builds)
-const LEDGER_NODE_HID_TRANSPORT_MODULE = "@ledgerhq/hw-transport-node-hid"
-
-const isBrowser = typeof window !== "undefined"
 // const Ledger  = module.exports
 
 const Ledger: any = {
@@ -31,10 +27,7 @@ const Ledger: any = {
     wble: require("@ledgerhq/hw-transport-web-ble").default,
 
     // requiring the node transport in the browser causes a bit of an issue with webpack! this is a conditional require
-    node:
-      !isBrowser && moduleExists(LEDGER_NODE_HID_TRANSPORT_MODULE)
-        ? require(LEDGER_NODE_HID_TRANSPORT_MODULE).default
-        : null,
+    node: null,
   },
 }
 
@@ -42,10 +35,3 @@ module.exports = Ledger
 
 export default Ledger
 
-function moduleExists(name: string) {
-  try {
-    return require.resolve(name)
-  } catch (e) {
-    return false
-  }
-}
